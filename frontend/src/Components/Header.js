@@ -15,7 +15,7 @@ const classNames = (...classes) => {
 
 const Header = () => {
   return (
-    <Disclosure as="nav" className="bg-gray-800">
+    <Disclosure as="nav" className=" fixed w-full">
       {({ open }) => (
         <>
           <div className="z-10 px-2 mx-auto max-w-7xl sm:px-6 lg:px-8">
