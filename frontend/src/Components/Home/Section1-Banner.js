@@ -4,15 +4,15 @@ import Button from "../SubComponents/Button";
 const Banner = () => {
   return (
     <div
-      className="h-screen relative"
+      className="relative flex flex-col items-center justify-center h-screen"
       style={{
         backgroundImage: `url(${bannerBg})`,
       }}
     >
-      <div className="absolute top-1/2 left-1/2 font-bold -translate-x-1/2 -translate-y-1/2 flex-col items-center justify-center text-center text-white gap-2">
+      <div className="flex-col items-center justify-center gap-2 font-bold text-center text-white">
         <h3 className="text-[#00fadf] text-5xl ">PLAY UNLIMITED</h3>
-        <h1 className="text-7xl m-8">TOURNAMENTS</h1>
-        <p className="text-lg font-semibold w-3/4 m-auto">
+        <h1 className="m-8 text-7xl">TOURNAMENTS</h1>
+        <p className="w-3/4 m-auto text-lg font-semibold">
           Compete in Free and Paid entry Tournaments. Transform your games to
           real money eSports
         </p>
