@@ -1,4 +1,5 @@
 import bannerBg from "../../images/banner-bg.png";
+import Button from "../SubComponents/Button";
 
 const Banner = () => {
   return (
@@ -15,6 +16,7 @@ const Banner = () => {
           Compete in Free and Paid entry Tournaments. Transform your games to
           real money eSports
         </p>
+        <Button name="GET STARTED" />
       </div>
     </div>
   );
