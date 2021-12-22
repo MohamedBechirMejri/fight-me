@@ -1,4 +1,7 @@
 import bannerBg from "../../images/banner-bg.png";
+import versus from "../../images/versus.png";
+import leftBanner from "../../images/left-banner.png";
+import rightBanner from "../../images/right-banner.png";
 import Button from "../SubComponents/Button";
 
 const Banner = () => {
@@ -18,6 +21,11 @@ const Banner = () => {
           real money eSports
         </p>
         <Button name="GET STARTED" />
+      </div>
+      <div className="absolute bottom-0 flex items-end justify-center">
+        <img src={leftBanner} alt="banner" className="" />
+        <img src={versus} alt="banner" className="" />
+        <img src={rightBanner} alt="banner" className="" />
       </div>
     </div>
   );
