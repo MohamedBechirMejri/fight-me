@@ -19,3 +19,9 @@ font-family: "Chakra Petch", sans-serif;
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+html,
+body {
+  width: 100vw;
+  overflow-x: hidden;
+}
