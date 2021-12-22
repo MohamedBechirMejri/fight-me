@@ -9,6 +9,7 @@ const Banner = () => {
         backgroundImage: `url(${bannerBg})`,
       }}
     >
+      {/* TODO: fix text on small screens */}
       <div className="flex-col items-center justify-center gap-2 font-bold text-center text-white">
         <h3 className="text-[#00fadf] text-5xl ">PLAY UNLIMITED</h3>
         <h1 className="m-8 text-7xl">TOURNAMENTS</h1>
