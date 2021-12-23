@@ -3,8 +3,9 @@ import { Fragment, useRef, useState } from "react";
 import { Dialog, Transition } from "@headlessui/react";
 import { RedirectToDiscord, RedirectToGoogle } from "../api/apiCalls";
 
-const Login = () => {
-  const [open, setOpen] = useState(true);
+const Login = (props) => {
+  const [open, setOpen] = [props.showLogin , props.setshowLogin];
+
 
   const cancelButtonRef = useRef(null);
 
@@ -59,7 +60,7 @@ const Login = () => {
                   </div>
                 </div>
               </div>
-              <div className="justify-center px-4 py-3 text-white bg-gray-50 sm:px-6 sm:flex sm:flex-row transition-all">
+              <div className="justify-center px-4 py-3 text-white transition-all bg-gray-50 sm:px-6 sm:flex sm:flex-row">
                 <button
                   type="button"
                   className="inline-flex justify-center w-full px-4 py-2 mt-3 text-base    border border-gray-300 rounded-md shadow-sm hover:bg-gray-50   sm:mt-0 sm:ml-3 sm:w-auto sm:text-sm bg-[#EA4335] hover:text-[#EA4335] transition-all  font-bold outline-none focus:outline-none"
