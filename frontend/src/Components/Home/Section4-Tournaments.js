@@ -1,4 +1,5 @@
 import Tournament from "./Tournament";
+import tournamentsBg from "../../assets/images/tournaments-bg.png";
 
 const Tournaments = (props) => {
   return (

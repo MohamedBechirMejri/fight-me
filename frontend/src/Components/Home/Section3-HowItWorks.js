@@ -1,5 +1,5 @@
 import Button from "../SubComponents/Button";
-import HowItWorksBg from "../../images/how-works-bg.png";
+import HowItWorksBg from "../../assets/images/how-works-bg.png";
 
 const steps = [
   {

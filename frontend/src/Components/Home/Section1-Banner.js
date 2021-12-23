@@ -1,7 +1,7 @@
-import bannerBg from "../../images/banner-bg.png";
-import versus from "../../images/versus.png";
-import leftBanner from "../../images/left-banner.png";
-import rightBanner from "../../images/right-banner.png";
+import bannerBg from "../../assets/images/banner-bg.png";
+import versus from "../../assets/images/versus.png";
+import leftBanner from "../../assets/images/left-banner.png";
+import rightBanner from "../../assets/images/right-banner.png";
 import Button from "../SubComponents/Button";
 
 const Banner = () => {
