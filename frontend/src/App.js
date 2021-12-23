@@ -3,8 +3,7 @@ import Header from "./Components/Header";
 import "./App.css";
 import Home from "./Components/Home";
 import React, { useContext } from "react";
-import { myContext } from "./AuthContext/context";
-import Login from "./Components/Login";
+import { myContext } from "./AuthContext/context"; 
 import SuccessLogin from "./Components/SuccessLogin";
 const App = () => {
   const user = useContext(myContext);
@@ -12,7 +11,7 @@ const App = () => {
   return (
     <div className=" App">
       <Header />
-      <Login />
+
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/login/success" element={<SuccessLogin />} />
