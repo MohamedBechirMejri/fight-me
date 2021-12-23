@@ -7,7 +7,7 @@ const Tournament = (props) => {
       <div>
         <h3>{props.tournament.title}</h3>
         <div>
-          <p>{props.tournament.countdown}</p>
+          <p>Starts in {props.tournament.countdown}</p>
           <p>{props.tournament.date}</p>
         </div>
         <hr />
