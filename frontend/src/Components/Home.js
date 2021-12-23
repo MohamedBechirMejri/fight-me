@@ -1,7 +1,7 @@
 import Banner from "./Home/Section1-Banner";
 import AvailableGames from "./Home/Section2-AvailableGames";
 import HowItWorks from "./Home/Section3-HowItWorks";
-import Tournaments from "./Home/Tournaments";
+import Tournaments from "./Home/Section4-Tournaments";
 
 const Home = () => {
   return (

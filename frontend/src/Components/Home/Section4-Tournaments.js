@@ -2,7 +2,7 @@ import Tournament from "./Tournament";
 
 const Tournaments = (props) => {
   return (
-    <div>
+    <div className="flex flex-col items-center justify-center gap-4 p-8 text-white">
       <h1>BROWSE TOURNAMENTS</h1>
       <p>
         Find the perfect tournaments for you. Head to head matches where you
