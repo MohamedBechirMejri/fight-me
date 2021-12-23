@@ -5,7 +5,7 @@ import { ExclamationIcon } from "@heroicons/react/outline";
 import { RedirectToDiscord, RedirectToGoogle } from "../api/apiCalls";
 
 const Login = () => {
-  const [open, setOpen] = useState(false);
+  const [open, setOpen] = useState(true);
 
   const cancelButtonRef = useRef(null);
 
@@ -58,46 +58,46 @@ const Login = () => {
                   <div className="mt-3 text-center sm:mt-0 sm:ml-4 sm:text-left">
                     <Dialog.Title
                       as="h3"
-                      className="text-lg font-medium leading-6 text-gray-900"
+                      className="text-lg font-medium leading-6 text-center text-gray-900"
                     >
-                      Deactivate account
+                      Login
                     </Dialog.Title>
-                    <div className="flex justify-center mt-2">
-                      <button
-                        type="button"
-                        className="inline-flex justify-center w-full px-4 py-2 mt-3 text-base font-medium text-gray-700 bg-white border border-gray-300 rounded-md shadow-sm hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 sm:mt-0 sm:ml-3 sm:w-auto sm:text-sm"
-                        onClick={() => {
-                          RedirectToGoogle();
-                          setOpen(false);
-                        }}
-                        ref={cancelButtonRef}
-                      >
-                        Google
-                      </button>{" "}
-                      <button
-                        type="button"
-                        className="inline-flex justify-center w-full px-4 py-2 mt-3 text-base font-medium text-gray-700 bg-white border border-gray-300 rounded-md shadow-sm hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 sm:mt-0 sm:ml-3 sm:w-auto sm:text-sm"
-                        onClick={() => {
-                          RedirectToDiscord();
-                          setOpen(false);
-                        }}
-                        ref={cancelButtonRef}
-                      >
-                        Discord
-                      </button>{" "}
-                      <button
-                        type="button"
-                        className="inline-flex justify-center w-full px-4 py-2 mt-3 text-base font-medium text-gray-700 bg-white border border-gray-300 rounded-md shadow-sm hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 sm:mt-0 sm:ml-3 sm:w-auto sm:text-sm"
-                        onClick={() => setOpen(false)}
-                        ref={cancelButtonRef}
-                      >
-                        Facebook
-                      </button>
-                    </div>
+                    <div className="flex justify-center mt-2"></div>
                   </div>
                 </div>
               </div>
-              <div className="px-4 py-3 bg-gray-50 sm:px-6 sm:flex sm:flex-row-reverse"></div>
+              <div className="justify-center px-4 py-3 bg-gray-50 sm:px-6 sm:flex sm:flex-row">
+                <button
+                  type="button"
+                  className="inline-flex justify-center w-full px-4 py-2 mt-3 text-base font-medium text-gray-700 bg-white border border-gray-300 rounded-md shadow-sm hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 sm:mt-0 sm:ml-3 sm:w-auto sm:text-sm"
+                  onClick={() => {
+                    RedirectToGoogle();
+                    setOpen(false);
+                  }}
+                  ref={cancelButtonRef}
+                >
+                  Google
+                </button>{" "}
+                <button
+                  type="button"
+                  className="inline-flex justify-center w-full px-4 py-2 mt-3 text-base font-medium text-gray-700 bg-white border border-gray-300 rounded-md shadow-sm hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 sm:mt-0 sm:ml-3 sm:w-auto sm:text-sm"
+                  onClick={() => {
+                    RedirectToDiscord();
+                    setOpen(false);
+                  }}
+                  ref={cancelButtonRef}
+                >
+                  Discord
+                </button>{" "}
+                <button
+                  type="button"
+                  className="inline-flex justify-center w-full px-4 py-2 mt-3 text-base font-medium text-gray-700 bg-white border border-gray-300 rounded-md shadow-sm hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 sm:mt-0 sm:ml-3 sm:w-auto sm:text-sm"
+                  onClick={() => setOpen(false)}
+                  ref={cancelButtonRef}
+                >
+                  Facebook
+                </button>
+              </div>
             </div>
           </Transition.Child>
         </div>
