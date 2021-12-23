@@ -8,23 +8,23 @@ const fetchuser = async () => {
       console.log(err);
       window.location("/");
       console.log("not allowed");
-      location.href("/");
+    //   location.href("/");
     });
     if (response && response.data) {
         localStorage.removeItem('user');
         localStorage.setItem("user", JSON.stringify(response.data));
-      
+
 
     }
   }
 function SucessLogin() {
-  
+
     useEffect (()=>{
         fetchuser();
         setTimeout(() => {
             window.close()
         }, 1000);
-        
+
     },[]);
     return <div>Logged in</div>
 }
