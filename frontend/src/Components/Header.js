@@ -2,9 +2,10 @@ import { Fragment } from "react";
 import { Disclosure, Menu, Transition } from "@headlessui/react";
 import { BellIcon, MenuIcon, XIcon } from "@heroicons/react/outline";
 import { Link } from "react-router-dom";
-import Button from './SubComponents/Button';
-import { useContext } from "react";
-import { myContext } from '../AuthContext/context';
+import Button from "./SubComponents/Button";
+import React , { useContext } from "react";
+import { myContext } from "../AuthContext/context";
+import Login from "./Login";
 
 const navigation = [
   { name: "Dashboard", href: "/dashboard", current: true },
@@ -17,11 +18,13 @@ const classNames = (...classes) => {
 };
 
 const Header = () => {
-   const user = useContext(myContext);
+  const user = useContext(myContext);
+  const [showLogin, setshowLogin] = React.useState(false);
   return (
     <Disclosure as="nav" className="fixed z-10 w-full ">
       {({ open }) => (
         <>
+          <Login showLogin={showLogin} setshowLogin={setshowLogin} />
           <div className="z-10 px-2 mx-auto max-w-7xl sm:px-6 lg:px-8">
             <div className="relative flex items-center justify-between h-16">
               <div className="absolute inset-y-0 left-0 flex items-center sm:hidden">
@@ -69,7 +72,7 @@ const Header = () => {
                 </div>
               </div>
               {!user ? (
-                <Button name="Login" onClick={() => console.log("test")} />
+                <Button name="Login" onClick={() => setshowLogin(true)} />
               ) : (
                 <div className="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
                   <button
@@ -137,7 +140,7 @@ const Header = () => {
                                 "block px-4 py-2 text-sm text-gray-700 bg-red-700"
                               )}
                             >
-                              Logoutout
+                              Logout
                             </a>
                           )}
                         </Menu.Item>
