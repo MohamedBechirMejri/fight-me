@@ -2,7 +2,6 @@
 import React, { createContext,  useEffect, useState } from 'react'
 
 
-
 export const myContext = createContext({})
 export default function Context(Props) {
   const [user,setUser] = useState();
