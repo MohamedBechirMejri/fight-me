@@ -15,7 +15,8 @@ const fetchuser = async () => {
     localStorage.setItem("user", JSON.stringify(response.data));
   }
 };
-function SucessLogin() {
+
+const SucessLogin = () => {
   useEffect(() => {
     fetchuser();
     setTimeout(() => {
@@ -23,5 +24,6 @@ function SucessLogin() {
     }, 1000);
   }, []);
   return <div>Logged in</div>;
-}
+};
+
 export default SucessLogin;
