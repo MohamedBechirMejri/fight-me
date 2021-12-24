@@ -44,7 +44,7 @@ useEffect (()=>{
 
           {loading ? (<div className="flex items-center justify-center gap-4">{game_list.map((game) => (
             <Game key={game.title} title={game.title} image={game.image} />
-          ))}</div>) : (<img style={{"max-width":"100px","max-heigth":"100px"}} src="https://cutewallpaper.org/24/loading-gif-png/loadinggifpng5-superior-lawn-care.png"></img>)}
+          ))}</div>) : (<div className="flex items-center justify-center gap-4"><img className="" style={{"max-width":"100px","max-heigth":"100px"}} src="https://cutewallpaper.org/24/loading-gif-png/loadinggifpng5-superior-lawn-care.png"></img></div>)}
           
         
         <Button name="VIEW ALL" />
