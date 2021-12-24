@@ -13,7 +13,7 @@ const get_game_list = async () => {
 };
 
 const RedirectToGoogle = async () => {
-  const googleLoginUrl = "http://localhost:3030/login/google";
+  const googleLoginUrl = "https://aqueous-falls-70675.herokuapp.com/login/google";
   const newWindow = window.open(
     googleLoginUrl,
     "_blank",
@@ -29,7 +29,7 @@ const RedirectToGoogle = async () => {
   }
 };
 const RedirectToDiscord = async () => {
-  const discordLoginUrl = "http://localhost:3030/login/discord";
+  const discordLoginUrl = "https://aqueous-falls-70675.herokuapp.com/login/discord";
   const newWindow = window.open(
     discordLoginUrl,
     "_blank",
@@ -47,7 +47,7 @@ const RedirectToDiscord = async () => {
 const logout = async () => {
   localStorage.removeItem("user");
   axios
-    .get("http://localhost:3030/logout", { withCredentials: true })
+    .get("https://aqueous-falls-70675.herokuapp.com/logout", { withCredentials: true })
     .then((res) => {
       if (res.data === "loggedout") {
         window.location.href = "/";

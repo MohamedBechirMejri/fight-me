@@ -1,21 +1,16 @@
-import axios from "axios";
-import { useEffect, useState } from "react";
 import { get_game_list } from "../api/apiCalls";
 import Banner from "./Home/Section1-Banner";
 import AvailableGames from "./Home/Section2-AvailableGames";
 import HowItWorks from "./Home/Section3-HowItWorks";
 import Tournaments from "./Home/Section4-Tournaments";
 
-get_game_list();
 
 const Home = () => {
-  const games = JSON.parse(localStorage.getItem("games"));
+ 
   return (
     <div>
       <Banner />
-      <AvailableGames
-        games={games}
-      />
+      <AvailableGames />
       <HowItWorks />
       <Tournaments
         tournaments={[
