@@ -16,9 +16,10 @@ const AvailableGames = (props) => {
          games:response.data.results
        };
         localStorage.setItem("games", JSON.stringify(games));
+       
         SetLoading(true);
       }else{
-        console.log("error");
+        console.log(response.data.errors);
       }
     })
     } catch (error) {
@@ -44,7 +45,7 @@ useEffect (()=>{
 
           {loading ? (<div className="flex items-center justify-center gap-4">{game_list.map((game) => (
             <Game key={game.title} title={game.title} image={game.image} />
-          ))}</div>) : (<div className="flex items-center justify-center gap-4"><img className="" style={{"max-width":"100px","max-heigth":"100px"}} src="https://cutewallpaper.org/24/loading-gif-png/loadinggifpng5-superior-lawn-care.png"></img></div>)}
+          ))}</div>) : (<div className="flex items-center justify-center gap-4"><img className="" style={{maxWidth:"100px",maxHeight:"100px"}} src="https://cutewallpaper.org/24/loading-gif-png/loadinggifpng5-superior-lawn-care.png"></img></div>)}
           
         
         <Button name="VIEW ALL" />

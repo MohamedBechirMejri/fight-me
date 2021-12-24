@@ -1,7 +1,35 @@
 import Tournament from "./Tournament";
 import tournamentsBg from "../../assets/images/tournaments-bg.png";
-
+import axios from "axios";
+import { useEffect, useState } from "react";
 const Tournaments = (props) => {
+  const [tournament_list,SetTournament_list]=useState([]);
+  const [loading,SetLoading]=useState(false);
+  const get_tournament_list = async () => {
+    try {
+      const tournament_api = "https://aqueous-falls-70675.herokuapp.com/api/v1/collect/tournaments/TournamentsAvailable";
+    axios.get(tournament_api).then((response) => {
+      if (response.status === 201) {
+        SetTournament_list(response.data.results);
+       var tournament = {
+        tournament:response.data.results
+       };
+        localStorage.setItem("tournament", JSON.stringify(tournament));
+       
+        SetLoading(true);
+      }else{
+        console.log(response.data.errors);
+      }
+    })
+    } catch (error) {
+      console.log(error);
+    }
+    
+  };
+useEffect (()=>{
+  get_tournament_list()
+  
+}, []);
   return (
     <div
       className="flex flex-col items-center justify-center gap-4 p-8 text-white "
@@ -14,11 +42,13 @@ const Tournaments = (props) => {
         Find the perfect tournaments for you. Head to head matches where you
         pick the game, rules and prize.
       </p>
-      <div className="flex ">
-        {props.tournaments.map((tournament) => (
+     
+      {loading ? (<div className="flex ">{tournament_list.map((tournament) => (
           <Tournament key={tournament.title} tournament={tournament} />
-        ))}
-      </div>
+        ))}</div>) : (<div className="flex "><img className="" style={{maxWidth:"100px",maxHeight:"100px"}} src="https://cutewallpaper.org/24/loading-gif-png/loadinggifpng5-superior-lawn-care.png"></img></div>)}
+          
+      
+      
     </div>
   );
 };
