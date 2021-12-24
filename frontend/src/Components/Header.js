@@ -6,6 +6,7 @@ import Button from "./SubComponents/Button";
 import React , { useContext } from "react";
 import { myContext } from "../AuthContext/context";
 import Login from "./Login";
+import { logout } from "../api/apiCalls";
 
 const navigation = [
   { name: "Dashboard", href: "/dashboard", current: true },
@@ -90,7 +91,7 @@ const Header = () => {
                         <span className="sr-only">Open user menu</span>
                         <img
                           className="w-8 h-8 rounded-full"
-                          src="https://picsum.photos/200/300"
+                          src={user.picture}
                           alt=""
                         />
                       </Menu.Button>
@@ -114,7 +115,7 @@ const Header = () => {
                                 "block px-4 py-2 text-sm text-gray-700"
                               )}
                             >
-                              Your Profile
+                              {user.username}
                             </a>
                           )}
                         </Menu.Item>
@@ -134,7 +135,7 @@ const Header = () => {
                         <Menu.Item>
                           {({ active }) => (
                             <a
-                              href="/logout"
+                              onClick={logout}
                               className={classNames(
                                 active ? "bg-gray-100" : "",
                                 "block px-4 py-2 text-sm text-gray-700 bg-red-700"

@@ -3,7 +3,7 @@ import Button from "../SubComponents/Button";
 const Tournament = (props) => {
   return (
     <div>
-      <img src={props.tournament.image} alt={props.tournament.title} />
+      <img style={{"height" : "300px" ," width":"200px"}} src={props.tournament.image} alt={props.tournament.title} />
       <div>
         <h3>{props.tournament.title}</h3>
         <div>

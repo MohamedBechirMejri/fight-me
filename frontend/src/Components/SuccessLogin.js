@@ -3,7 +3,7 @@ import React, { useEffect } from "react";
 
 const fetchuser = async () => {
   const response = await axios
-    .get("http://localhost:3030/getuser", { withCredentials: true })
+    .get("https://aqueous-falls-70675.herokuapp.com/getuser", { withCredentials: true })
     .catch((err) => {
       console.log(err);
       window.location("/");
