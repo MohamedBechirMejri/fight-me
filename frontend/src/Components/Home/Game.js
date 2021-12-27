@@ -6,7 +6,7 @@ const Game = (props) => {
       <img
         src={props.image}
         alt={props.title}
-        className="transition-all rounded-xl hover:scale-105"
+        className="overflow-hidden transition-all w-80 h rounded-xl hover:scale-105"
       />
     </Link>
   );
