@@ -43,7 +43,7 @@ const Tournaments = (props) => {
       </p>
 
       {loading ? (
-        <div className="flex ">
+        <div className="flex flex-col w-4/5 gap-8">
           {tournament_list.map((tournament) => (
             <Tournament key={tournament.title} tournament={tournament} />
           ))}
