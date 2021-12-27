@@ -11,11 +11,11 @@ const Tournaments = (props) => {
     axios.get(tournament_api).then((response) => {
       if (response.status === 201) {
         SetTournament_list(response.data.results);
-       var tournament = {
+       const tournament = {
         tournament:response.data.results
        };
         localStorage.setItem("tournament", JSON.stringify(tournament));
-       
+
         SetLoading(true);
       }else{
         console.log(response.data.errors);
@@ -24,11 +24,11 @@ const Tournaments = (props) => {
     } catch (error) {
       console.log(error);
     }
-    
+
   };
 useEffect (()=>{
   get_tournament_list()
-  
+
 }, []);
   return (
     <div
@@ -42,13 +42,13 @@ useEffect (()=>{
         Find the perfect tournaments for you. Head to head matches where you
         pick the game, rules and prize.
       </p>
-     
+
       {loading ? (<div className="flex ">{tournament_list.map((tournament) => (
           <Tournament key={tournament.title} tournament={tournament} />
-        ))}</div>) : (<div className="flex "><img className="" style={{maxWidth:"100px",maxHeight:"100px"}} src="https://cutewallpaper.org/24/loading-gif-png/loadinggifpng5-superior-lawn-care.png"></img></div>)}
-          
-      
-      
+        ))}</div>) : (<div className="flex "><img className="" style={{maxWidth:"100px",maxHeight:"100px"}} src="https://cutewallpaper.org/24/loading-gif-png/loadinggifpng5-superior-lawn-care.png" alt="change this later"></img></div>)}
+
+
+
     </div>
   );
 };
