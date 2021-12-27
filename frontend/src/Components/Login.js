@@ -4,8 +4,7 @@ import { Dialog, Transition } from "@headlessui/react";
 import { RedirectToDiscord, RedirectToGoogle } from "../api/apiCalls";
 
 const Login = (props) => {
-  const [open, setOpen] = [props.showLogin , props.setshowLogin];
-
+  const [open, setOpen] = [props.showLogin, props.setshowLogin];
 
   const cancelButtonRef = useRef(null);
 

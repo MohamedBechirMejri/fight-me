@@ -25,9 +25,12 @@ const steps = [
 ];
 const HowItWorks = () => {
   return (
-      <div className="flex flex-col items-center justify-center w-screen h-screen gap-8 font-extrabold text-white" style={{
+    <div
+      className="flex flex-col items-center justify-center w-screen h-screen gap-8 font-extrabold text-white"
+      style={{
         backgroundImage: `url(${HowItWorksBg})`,
-    }}>
+      }}
+    >
       <h1 className="text-7xl">HOW IT WORKS</h1>
       <p>It's easier than you think. Follow 4 simple easy steps</p>
       <div className="flex gap-24">

@@ -1,19 +1,21 @@
 import axios from "axios";
 
 const get_game_list = async () => {
-  const games_api = "https://aqueous-falls-70675.herokuapp.com/api/v1/collect/games/GamesAvailable";
+  const games_api =
+    "https://aqueous-falls-70675.herokuapp.com/api/v1/collect/games/GamesAvailable";
   axios.get(games_api).then((response) => {
     if (response.status === 201) {
-     var games = {
-       games:response.data.results
-     };
+      var games = {
+        games: response.data.results,
+      };
       localStorage.setItem("games", JSON.stringify(games));
     }
-  })
+  });
 };
 
 const RedirectToGoogle = async () => {
-  const googleLoginUrl = "https://aqueous-falls-70675.herokuapp.com/login/google";
+  const googleLoginUrl =
+    "https://aqueous-falls-70675.herokuapp.com/login/google";
   const newWindow = window.open(
     googleLoginUrl,
     "_blank",
@@ -29,7 +31,8 @@ const RedirectToGoogle = async () => {
   }
 };
 const RedirectToDiscord = async () => {
-  const discordLoginUrl = "https://aqueous-falls-70675.herokuapp.com/login/discord";
+  const discordLoginUrl =
+    "https://aqueous-falls-70675.herokuapp.com/login/discord";
   const newWindow = window.open(
     discordLoginUrl,
     "_blank",
@@ -47,7 +50,9 @@ const RedirectToDiscord = async () => {
 const logout = async () => {
   localStorage.removeItem("user");
   axios
-    .get("https://aqueous-falls-70675.herokuapp.com/logout", { withCredentials: true })
+    .get("https://aqueous-falls-70675.herokuapp.com/logout", {
+      withCredentials: true,
+    })
     .then((res) => {
       if (res.data === "loggedout") {
         window.location.href = "/";
