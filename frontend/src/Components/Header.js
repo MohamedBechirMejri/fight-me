@@ -3,7 +3,7 @@ import { Disclosure, Menu, Transition } from "@headlessui/react";
 import { BellIcon, MenuIcon, XIcon } from "@heroicons/react/outline";
 import { Link } from "react-router-dom";
 import Button from "./SubComponents/Button";
-import React , { useContext } from "react";
+import React, { useContext } from "react";
 import { myContext } from "../AuthContext/context";
 import Login from "./Login";
 import { logout } from "../api/apiCalls";
@@ -134,7 +134,7 @@ const Header = () => {
                         </Menu.Item>
                         <Menu.Item>
                           {({ active }) => (
-                            <a
+                            <button
                               onClick={logout}
                               className={classNames(
                                 active ? "bg-gray-100" : "",
@@ -142,7 +142,7 @@ const Header = () => {
                               )}
                             >
                               Logout
-                            </a>
+                            </button>
                           )}
                         </Menu.Item>
                       </Menu.Items>
