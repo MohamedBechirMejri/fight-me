@@ -3,6 +3,22 @@ import { useEffect, useState } from "react";
 import Button from "../SubComponents/Button";
 import Game from "./Game";
 
+// Import Swiper React components
+import { Swiper, SwiperSlide } from "swiper/react";
+
+// Import Swiper styles
+import "swiper/css";
+import "swiper/css/pagination";
+import "swiper/css/navigation";
+
+import "./styles.css";
+
+// import Swiper core and required modules
+import SwiperCore, { Pagination, Navigation } from "swiper";
+
+// install Swiper modules
+SwiperCore.use([Pagination, Navigation]);
+
 const AvailableGames = (props) => {
   const [game_list, SetGame_list] = useState([]);
   const [loading, SetLoading] = useState(false);
