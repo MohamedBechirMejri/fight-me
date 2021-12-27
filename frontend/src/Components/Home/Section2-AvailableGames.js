@@ -11,8 +11,6 @@ import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
 
-import "./styles.css";
-
 // import Swiper core and required modules
 import SwiperCore, { Pagination, Navigation } from "swiper";
 
@@ -58,9 +56,30 @@ const AvailableGames = (props) => {
 
         {loading ? (
           <div className="flex items-center justify-center gap-4 overflow-scroll">
-            {game_list.map((game) => (
-              <Game key={game.title} title={game.title} image={game.image} />
-            ))}
+            <>
+              <Swiper
+                slidesPerView={3}
+                spaceBetween={30}
+                slidesPerGroup={3}
+                loop={true}
+                loopFillGroupWithBlank={true}
+                pagination={{
+                  clickable: true,
+                }}
+                navigation={true}
+                className="mySwiper"
+              >
+                {game_list.map((game) => (
+                  <SwiperSlide>
+                    <Game
+                      key={game.title}
+                      title={game.title}
+                      image={game.image}
+                    />
+                  </SwiperSlide>
+                ))}{" "}
+              </Swiper>
+            </>
           </div>
         ) : (
           <div className="flex items-center justify-center gap-4">
