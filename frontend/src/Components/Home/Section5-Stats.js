@@ -32,19 +32,25 @@ export default function Stats() {
     },
   ];
   return (
-    <div>
+    <div className="h-screen w-screen p-8 flex flex-wrap gap-8 items-center justify-center text-center text-white ">
       {stats.map((stat) => {
         return (
-          <div key={uniqid()}>
-            <div>
-              <img src={stat.img} alt="" />
-            </div>
-            <h2>
+          <div
+            key={uniqid()}
+            className="rounded-2xl p-8 px-20 border flex flex-col items-center justify-center gap-2 "
+          >
+            <img
+              src={stat.img}
+              alt=""
+              className="rounded-full w-1/3 ring-[1.5em] m-8 ring-[#4609C3]"
+            />
+
+            <h2 className="text-4xl font-bold">
               {stat.beforeVal}
               {stat.value}
               {stat.afterVal}
             </h2>
-            <p>{stat.title}</p>
+            <p className="text-[#64BE56]">{stat.title}</p>
           </div>
         );
       })}
