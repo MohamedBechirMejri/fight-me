@@ -1,6 +1,6 @@
 import uniqid from "uniqid";
 
-export default function Stats() {
+const Stats = () => {
   const stats = [
     {
       title: "MATCHES PLAYED",
@@ -56,4 +56,6 @@ export default function Stats() {
       })}
     </div>
   );
-}
+};
+
+export default Stats;
