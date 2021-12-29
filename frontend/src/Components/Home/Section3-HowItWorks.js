@@ -1,5 +1,6 @@
 import Button from "../SubComponents/Button";
 import HowItWorksBg from "../../assets/images/how-works-bg.png";
+import uniqid from "uniqid";
 
 const steps = [
   {
@@ -35,7 +36,7 @@ const HowItWorks = () => {
       <p>It's easier than you think. Follow 4 simple easy steps</p>
       <div className="flex gap-24">
         {steps.map((step) => (
-          <div className="relative">
+          <div className="relative" key={uniqid()}>
             <div className="flex items-center justify-center w-24 h-24 bg-[#4609C3] rounded-2xl">
               later
             </div>
