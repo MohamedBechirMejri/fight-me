@@ -6,8 +6,7 @@ const PlayersOfTheWeek = () => {
   const players = [
     {
       name: "Kobe Bryant",
-      image:
-        "https://www.nba.com/assets/logos/teams/primary/web/kobe-bryant.svg",
+      image: "https://picsum.photos/200/200",
       rank: 1,
       points: "27,947",
       reward: "+20 credits",
@@ -15,8 +14,7 @@ const PlayersOfTheWeek = () => {
     },
     {
       name: "Lebron James",
-      image:
-        "https://www.nba.com/assets/logos/teams/primary/web/lebron-james.svg",
+      image: "https://picsum.photos/200/200",
       rank: 2,
       points: "27,947",
       reward: "+20 credits",
@@ -24,8 +22,7 @@ const PlayersOfTheWeek = () => {
     },
     {
       name: "Stephen Curry",
-      image:
-        "https://www.nba.com/assets/logos/teams/primary/web/stephen-curry.svg",
+      image: "https://picsum.photos/200/200",
       rank: 3,
       points: "27,947",
       reward: "+20 credits",
@@ -33,8 +30,7 @@ const PlayersOfTheWeek = () => {
     },
     {
       name: "Kevin Durant",
-      image:
-        "https://www.nba.com/assets/logos/teams/primary/web/kevin-durant.svg",
+      image: "https://picsum.photos/200/200",
       rank: 4,
       points: "27,947",
       reward: "+20 credits",
@@ -42,8 +38,7 @@ const PlayersOfTheWeek = () => {
     },
     {
       name: "James Harden",
-      image:
-        "https://www.nba.com/assets/logos/teams/primary/web/james-harden.svg",
+      image: "https://picsum.photos/200/200",
       rank: 5,
       points: "27,947",
       reward: "+20 credits",
@@ -51,9 +46,12 @@ const PlayersOfTheWeek = () => {
     },
   ];
   return (
-      <div className="h-screen w-screen " style={{
+    <div
+      className="h-screen w-screen "
+      style={{
         backgroundImage: `url(${playersWeekBg})`,
-    }}>
+      }}
+    >
       <h1>Players of the week</h1>
       <p>
         We take a look at the best player of the week awarded on Monday for the
