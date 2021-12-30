@@ -1,3 +1,4 @@
+import Footer from "./Footer";
 import Banner from "./Home/Section1-Banner";
 import AvailableGames from "./Home/Section2-AvailableGames";
 import HowItWorks from "./Home/Section3-HowItWorks";
@@ -20,6 +21,7 @@ const Home = () => {
       <Features />
       <Reviews />
       <BuildProfile />
+      <Footer/>
     </div>
   );
 };
