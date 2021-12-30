@@ -1,4 +1,5 @@
 import uniqid from "uniqid";
+import counterBg from "../../assets/images/counter-bg.png";
 
 const Stats = () => {
   const stats = [
@@ -32,7 +33,9 @@ const Stats = () => {
     },
   ];
   return (
-    <div className="h-screen w-screen p-8 flex flex-wrap gap-8 items-center justify-center text-center text-white ">
+    <div className="h-screen w-screen p-8 flex flex-wrap gap-8 items-center justify-center text-center text-white " style={{
+      backgroundImage: `url(${counterBg})`,
+    }}>
       {stats.map((stat) => {
         return (
           <div
