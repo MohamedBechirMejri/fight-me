@@ -3,6 +3,7 @@ import AvailableGames from "./Home/Section2-AvailableGames";
 import HowItWorks from "./Home/Section3-HowItWorks";
 import Tournaments from "./Home/Section4-Tournaments";
 import Stats from "./Home/Section5-Stats";
+import PlayersOfTheWeek from "./Home/Section6-PlayersOfTheWeek";
 
 const Home = () => {
   return (
@@ -11,7 +12,8 @@ const Home = () => {
       <AvailableGames />
       <HowItWorks />
       <Tournaments />
-      <Stats/>
+      <Stats />
+      <PlayersOfTheWeek />
     </div>
   );
 };
