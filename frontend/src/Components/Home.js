@@ -6,6 +6,7 @@ import Stats from "./Home/Section5-Stats";
 import PlayersOfTheWeek from "./Home/Section6-PlayersOfTheWeek";
 import Features from "./Home/Section7-Features";
 import Reviews from "./Home/Section8-FakeReviews";
+import BuildProfile from "./Home/Section9-BuildProfile";
 
 const Home = () => {
   return (
@@ -17,7 +18,8 @@ const Home = () => {
       <Stats />
       <PlayersOfTheWeek />
       <Features />
-      <Reviews/>
+      <Reviews />
+      <BuildProfile />
     </div>
   );
 };
